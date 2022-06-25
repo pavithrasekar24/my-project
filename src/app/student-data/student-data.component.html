@@ -1,0 +1,58 @@
+<h2>Student Data component Page</h2>
+
+ts -html -one waybinding
+<br/>
+<em>1. Interpolation </em>
+<li>Name: {{name}}</li>
+<li>Age: {{age}}</li>
+<em>2. Property binding [propertyName]</em>
+
+<!-- [propertyName] ="variableName"
+[propertyName]="'txt'"
+value="text" -->
+<li>
+<input type="text" name="name" [value]="name"/>
+</li>
+<li>
+  <input type="text" name="name" [value]="'Pavithra'"/>
+</li>
+
+<li>
+  <img  [class]="imageClassName" [src]="imageURL" alt="king-image"/>
+</li>
+
+<li>
+  <img  [class]="imageClassName" src={{imageURL}} alt="king-image"/>
+</li>
+<br/>
+<em>3.Attribute binding [attr.attributeName]</em>
+<table class="student-table">
+  <thead>
+    <tr>
+      <th [attr.rowspan]="count">SNO</th>
+      <th [attr.colspan]="count">FullName</th>
+    </tr>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+    </tr>
+  </thead>
+
+</table>
+<br/>
+<em>4. Event binding (event handler)</em>
+<div>events -click,change,input,mouseleave,keypress,keydown</div>
+
+<button (click)="handleCounter()">Click {{counter}}</button>
+
+<li>FirstName :{{firstName}}</li>
+<input type="text" name="firstName" value={{firstName}} (input)="handleFirstName($event)" />
+
+<br/>
+<em>5.two waybinding </em>
+
+<li>LastName :{{lastName}}</li>
+<input type="text" name="lastName" [(ngModel)]="lastName" />
+
+
+

@@ -1,0 +1,10 @@
+<p>{{eventName}}
+  event-details works!  {{eventDetails.eventName}} {{eventDetails.location}}
+</p>
+
+
+<div *ngFor="let e of events;let i=index">
+  <em>{{e.eventName}}</em>
+  <em>{{e.location}}</em>
+  <em><button (click)="handleDelete(i)">Delete</button></em>
+</div>

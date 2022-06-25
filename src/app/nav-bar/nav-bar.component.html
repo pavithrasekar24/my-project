@@ -1,0 +1,17 @@
+<!-- <nav>
+<li>
+<a [routerLink]="'employee'">Employee</a>
+</li>
+<li>
+  <a [routerLink]="'student'">Student</a>
+  </li>
+  <li>
+    <a href="customer">Customer</a>
+    </li>
+</nav> -->
+
+<nav>
+  <li *ngFor="let nav of navBarDetails">
+    <a [routerLink]="nav.path">{{nav.label}}</a>
+  </li>
+</nav>

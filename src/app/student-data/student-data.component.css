@@ -1,0 +1,14 @@
+input{
+  margin:10px;
+  border:1px solid blue;
+  padding:5px 20px;
+  border-radius:5px;
+}
+li{
+  margin:10px;
+}
+.king-img{
+  width:100px;
+  height:100px;
+}
+

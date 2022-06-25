@@ -1,0 +1,31 @@
+
+<h1>Customer Table</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>SNO</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-template [ngIf]="customerDetails.length>0"
+       [ngIfThen]="displayStudent" [ngIfElse]="noRecords"></ng-template>
+  </tbody>
+</table>
+
+<ng-template #displayStudent>
+  <tr *ngFor="let customer of customerDetails">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.age}}</td>
+    <td>{{customer.gender}}</td>
+  </tr>
+</ng-template>
+
+<ng-template #noRecords>
+  <tr>
+    <td [attr.colspan]="4">No records</td>
+  </tr>
+</ng-template>

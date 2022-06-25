@@ -1,0 +1,26 @@
+<p>
+  Add-event works! {{evtName}}
+</p>
+
+<div>
+    <!-- <input  placeholder="Enter Event Name" [(ngModel)]='evtName' > -->
+    <input  placeholder="Enter Event Name"
+     [(ngModel)]='eventDetails.eventName'>
+
+    <input  placeholder="Enter Location"
+    [(ngModel)]='eventDetails.location' >
+</div>
+
+<button (click)="handleAdd()">Add</button>
+
+//child selector
+<!-- <app-event-details [eventName]="'Bday Party'"></app-event-details> -->
+<app-event-details [eventName]="evtName" [eventDetails]="eventDetails" [events]="events" (sendIndex)="getIndex($event)"></app-event-details>
+
+
+<!-- data sharing via service -->
+
+<app-approvalStatus></app-approvalStatus>
+
+<app-get-status></app-get-status>
+

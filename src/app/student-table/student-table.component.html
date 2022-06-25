@@ -1,0 +1,24 @@
+<h1>student Table</h1>
+structural directive *ngIf(condn satisifed content display)
+*ngFor(iterating & displaying ele)
+*ngSwitch(case (if) then default)
+template vaiable #variableName
+<h3>Student table</h3>
+<hr/>
+<div *ngIf="studentDetails.length>0">
+<ul *ngFor="let item of studentDetails">
+  <li>{{item.id}}</li>
+  <li>{{item.name}}</li>
+  <li>{{item.age}}</li>
+  <!-- <li>{{item.gender}}</li> -->
+  <li [ngSwitch]="item.gender">
+    <label *ngSwitchCase="'M'">Male</label>
+    <label *ngSwitchCase="'F'">Female</label>
+    <label *ngSwitchDefault>Other</label>
+  </li>
+</ul>
+</div>
+
+<ul *ngIf="studentDetails.length==0">
+No records Found
+</ul>

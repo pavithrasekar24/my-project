@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <input class="form-control" name="searchTerm" type="text" [(ngModel)]="searchTerm" (ngModelChange)="search()">
+  </nav>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>Firstname</th>
+    <th>lastname</th>
+    <th>salary</th>
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let emp of filteredEmployees">
+<td>{{emp.id}}</td>
+<td>{{emp.firstname}}</td>
+<td>{{emp.lastname}}</td>
+<td>{{emp.salary}}</td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+<hr/>
+<h4>
+  approvalStatus works!  {{status}}
+</h4>
+
+
+<select  (change)="handleChange($event)" >
+  <option></option>
+  <option *ngFor="let item of approvalDetails" [value]='item'>{{item}}</option>
+</select>
