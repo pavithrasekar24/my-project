@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
 
-  @Input() eventName:string='bd';
+  @Input() eventName:string='party';
   @Input() eventDetails:any;
   @Input() events:any[]=[];
   @Output() sendIndex =new EventEmitter<any>();
