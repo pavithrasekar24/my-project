@@ -21,6 +21,8 @@
     <td>{{customer.name}}</td>
     <td>{{customer.age}}</td>
     <td>{{customer.gender}}</td>
+    <td><button (click)="handleEdit(customer.id)">Edit</button></td>
+    <td><button (click)="handleDelete(customer.name,customer.id)">Delete</button></td>
   </tr>
 </ng-template>
 

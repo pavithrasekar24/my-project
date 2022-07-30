@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,9 +16,15 @@ import { EventDetailsComponent } from './event-details/event-details.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { ApprovalStatusComponent } from './approvalStatus/approvalStatus.component';
 import { GetStatusComponent } from './get-status/get-status.component';
+import { DirectiveExampleComponent } from './directive-example/directive-example.component';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { MyDirectiveDirective } from './my-directive.directive';
+import {  concatPipe, FilterPipe, SquarePipe } from './custom.pipe';
+import { CustomerComponent } from './customer/customer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
     StudentDataComponent,
     StudentTableComponent,
@@ -30,14 +36,24 @@ import { GetStatusComponent } from './get-status/get-status.component';
       EventDetailsComponent,
       AddEventComponent,
       ApprovalStatusComponent,
-      GetStatusComponent
+      GetStatusComponent,
+      DirectiveExampleComponent,
+      PipeExampleComponent,
+      MyDirectiveDirective,
+      SquarePipe,
+      concatPipe,
+      FilterPipe,
+      CustomerComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   alert(`${this.userName} login successfully`);
 //implement logic
   // this.router.navigateByUrl('/user');
-  this.router.navigateByUrl('/user/employee');
+  this.router.navigateByUrl('/user/directive-types');
   }
   ngOnInit() {
   }

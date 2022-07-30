@@ -19,7 +19,9 @@ const routes: Routes = [
 //my-app/cus - my-app/emp - my-app/stu
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+   declarations: [
+   ]
 })
 export class AppRoutingModule { }
 

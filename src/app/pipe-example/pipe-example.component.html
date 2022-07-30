@@ -1,0 +1,33 @@
+<h1>Use Pipes to transform the string,currency amounts, dates and other data</h1>
+
+<p>Pipes are simple functions to use in template expressions to accept and input value & return transformation values</p>
+
+<ol>
+  <li>Inbuild Pipe</li>
+  <li>Custom -pipe</li>
+</ol>
+
+
+<h1>Inbuid pipe</h1>
+<p>{{userName | uppercase}}</p>
+<p>{{userName | lowercase}}</p>
+<p>{{userName | titlecase}}</p>
+<p>{{amount | number}}</p>
+<p>{{amount| currency:'INR'}}</p>
+<p>{{amount| currency:'USD'}}</p>
+<p>{{dob | date:'dd-MMM-yyyy'}}</p>
+<p>{{dob | date:'dd-MM-yyyy'}}</p>
+<p>{{student | json}}</p>
+<p>{{amount | square}}</p>
+
+<p>{{userName |concat : surname}}</p>
+
+
+
+
+
+<input  type="text" [(ngModel)]="searchName"/>
+
+<ul *ngFor="let item of userNames | filter:searchName:'username'; let i=index">
+<li id={{i}}>{{item.id}} {{item.username}}</li>
+</ul>

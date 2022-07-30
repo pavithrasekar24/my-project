@@ -1,0 +1,25 @@
+<div>
+<h1>Directives</h1>
+Directives are classes that add additional behavior
+to elements in your Angular applications.
+<br/>
+There are four types of directives in Angular,
+
+<ol>
+<li>Components directives</li>
+<p>specify the html templaes</p>
+<li>Structural directives</li>
+<p>ngIf,ngFor,ngSwitch -> add & remove elemenets form DOM</p>
+<li>Attribute directives</li>
+<p>ngstyle , ngclass</p>
+<li>Custom Directive</li>
+<p>create directive & own logic implementation</p>
+</ol>
+</div>
+
+<p [ngStyle]="myStyle()"> This is the paragrah</p>
+
+<div [ngClass]="applyClasses()">The content ..... for ngclass example</div>
+
+
+<p appMyDirective [getColor]="getColor">custom directive....</p>

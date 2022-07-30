@@ -13,7 +13,11 @@ export class NavBarComponent implements OnInit {
      {id:4,path:'student',label:'Student'},
      {id:5,path:'student-table',label:'Student Table'},
      {id:6,path:'employee',label:'Employee'},
-     {id:7,path:'add-event',label:'Event'}
+     {id:7,path:'add-event',label:'Event'},
+     {id:8,path:'directive-types',label:'Directive types'},
+     {id:8,path:'pipe-types',label:'Pipe types'}
+
+
 
    ]
   constructor() { }
